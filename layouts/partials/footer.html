@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
           <h3 class="text-white mb-4">{{ i18n "subscribe_newsletter" }}</h3>
-		  <iframe src="https://agilechronicles.substack.com/embed" width="900" height="100" style="border:0px solid #BF2604; background: #BF2604; padding-bottom:0;margin-bottom:0;" frameborder="0" scrolling="no"></iframe>	 
+		  <iframe width="{{ .subs_form_width }}" height="{{ .subs_form_height }}" src="{{ .subs_form_action }}" style="{{ .subs_form_style }}" frameborder="0" scrolling="no"></iframe>	 
 		  <!--
           <form action="{{ .mailchimp_form_action }}" method="post" name="mc-embedded-subscribe-form" target="_blank">
             <div class="input-wrapper">
