@@ -3,30 +3,19 @@
   <!-- newsletter -->
   {{ if site.Params.subscription.enable }}
   {{ with site.Params.subscription }}
-  <div class="newsletter">
+  <div class="newsletter" style="margin-bottom:40px;">
     <div class="container">
       <div class="row">
         <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
           <h3 class="text-white mb-4">{{ i18n "subscribe_newsletter" }}</h3>
 		  <iframe width="{{ .subs_form_width }}" height="{{ .subs_form_height }}" src="{{ .subs_form_action }}" style="{{ .subs_form_style }}" frameborder="0" scrolling="no"></iframe>	 
-		  <!--
-          <form action="{{ .mailchimp_form_action }}" method="post" name="mc-embedded-subscribe-form" target="_blank">
-            <div class="input-wrapper">
-              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="{{ i18n "enter_email" }}">
-              <button type="submit" name="subscribe" class="btn btn-primary">{{ i18n "join" }}</button>
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="{{ .mailchimp_form_name }}" tabindex="-1">
-              </div>			  
-            </div>
-          </form>
-		  -->
         </div>
       </div>
     </div>
   </div>
   {{ end }}
   {{ end }}
-  
+
   {{ if site.Params.showFooter.enable }}
   <!-- footer content -->
   <div class="footer bg-footer section border-bottom">
